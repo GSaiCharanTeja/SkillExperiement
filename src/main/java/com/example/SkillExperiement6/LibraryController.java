@@ -48,8 +48,8 @@ public class LibraryController {
 	List<Book> bookList=new ArrayList<>();
 	
 	@PostMapping("/addbook")
-	public void addBook(@RequestBody Book b) {
-		bookList.add(b);
+	public void addBook(@RequestBody List<Book>Books) {
+		bookList.addAll(Books);
 	}
 	
 	//10 create a method to /viewbooks using @GetMapping that returns all added book objects
